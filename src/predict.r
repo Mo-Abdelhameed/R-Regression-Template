@@ -91,7 +91,7 @@ if (length(categorical_features) > 0 && file.exists(OHE_ENCODER_FILE)) {
 model <- readRDS(PREDICTOR_FILE_PATH)
 predictions <- predict(model, newdata = df)
 
-# Getting the original labels
+# Creating predictions DataFrame
 
 predictions_df <- data.frame(Prediction = predictions)
 

@@ -121,11 +121,6 @@ if(length(categorical_features) > 0){
     df <- df_encoded
 }
 
-
-# Label encoding target feature
-levels_target <- levels(factor(target))
-
-
 # Train the model
 # We choose Linear Regression, but feel free to try your own and compare the results.
 model <- lm(target ~ ., data = df)
