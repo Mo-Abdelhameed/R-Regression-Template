@@ -93,7 +93,7 @@ predictions <- predict(model, newdata = df)
 
 # Creating predictions DataFrame
 
-predictions_df <- data.frame(Prediction = predictions)
+predictions_df <- data.frame(prediction = predictions)
 
 predictions_df <- tibble(ids = ids) %>% bind_cols(predictions_df)
 colnames(predictions_df)[1] <- id_feature
